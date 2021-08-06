@@ -2,3 +2,16 @@
 - create folder 'config' which contain '.env.development', '.env.production', '.env.testing'. Then add package 'dotenv'. 
 Fix script run in package.json.  
 - Create ConfigModule in app.module.ts.   Doc: https://docs.nestjs.com/techniques/configuration
+- Create database config
+- Create router.js
+- Add package i18n, @types/i18n. Config i18n. Create middleware for set lang cookie in router.ts
+- Create Dictionary type in util/locale
+- Create JoiError interface
+- Create ErrorType, ResponseForDeveloper, ResponseForClient
+- Create ApiReponse class, containe send() and sendError() method
+
+
+
+
+
+
