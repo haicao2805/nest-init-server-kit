@@ -1,0 +1,4 @@
+- init nest with cmd: nest new project-name
+- create folder 'config' which contain '.env.development', '.env.production', '.env.testing'. Then add package 'dotenv'. 
+Fix script run in package.json.  
+- Create ConfigModule in app.module.ts.   Doc: https://docs.nestjs.com/techniques/configuration
