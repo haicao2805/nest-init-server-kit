@@ -17,26 +17,14 @@ export class JoiValidatorPipe implements PipeTransform {
       }
 
       transform(input: any) {
-            if (!input)
-                  throw apiReponse.sendError(
-                        {
-                              data: null,
-                              details: { errorMessage: { type: 'error.invalid-input' } },
-                        },
-                        'BadRequestException',
-                  );
+            if (!input) throw apiReponse.sendError({ data: null, details: { errorMessage: { type: 'error.invalid-input' } } }, 'BadRequestException');
             /**
              *  abortEarly:false ==> return all error
              *  abortEarly:true  ==> return the first error
              */
-            const { error } = this.schema.validate(input, { abortEarly: false });
-            if (error)
-                  throw apiReponse.sendError(
-                        {
-                              data: null,
-                              details: this.mapJoiError(error),
-                        },
-                        'BadRequestException',
-                  );
+            const { error, value } = this.schema.validate(input, { abortEarly: false });
+            if (error) throw apiReponse.sendError({ data: null, details: this.mapJoiError(error) }, 'BadRequestException');
+
+            return value;
       }
 }
