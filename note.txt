@@ -9,6 +9,11 @@ Fix script run in package.json.
 - Create JoiError interface
 - Create ErrorType, ResponseForDeveloper, ResponseForClient
 - Create ApiReponse class, containe send() and sendError() method
+- Create Repository service, in util/repository
+- Create auth 
+- Config Jwt
+- Create user entity, user repository, user service
+- init code test
 
 
 
